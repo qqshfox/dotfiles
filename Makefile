@@ -10,6 +10,7 @@ clean_dirs := $(addprefix _clean_,$(SUBDIRS))
 all: submodules subdirs
 
 submodules:
+	git submodule sync
 	git submodule update --init --recursive
 
 update: submodules
