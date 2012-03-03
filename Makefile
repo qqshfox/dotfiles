@@ -5,12 +5,14 @@ SUBDIRS := $(dirs)
 install_dirs := $(addprefix _install_,$(SUBDIRS))
 clean_dirs := $(addprefix _clean_,$(SUBDIRS))
 
-.PHONY: all subdirs $(SUBDIRS) clean
+.PHONY: all submodules update $(SUBDIRS) subdirs $(install_dirs) insall $(clean_dirs) clean
 
 all: submodules subdirs
 
 submodules:
 	git submodule update --init --recursive
+
+update: submodules
 
 $(SUBDIRS):
 	$(MAKE) -C $@
