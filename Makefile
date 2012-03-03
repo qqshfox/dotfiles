@@ -2,6 +2,7 @@ dirs := $(shell find . -maxdepth 1 -type d)
 dirs := $(basename $(patsubst ./%,%,$(dirs)))
 
 SUBDIRS := $(dirs)
+update_dirs := $(addprefix _update_,$(SUBDIRS))
 install_dirs := $(addprefix _install_,$(SUBDIRS))
 clean_dirs := $(addprefix _clean_,$(SUBDIRS))
 
@@ -13,7 +14,10 @@ submodules:
 	git submodule sync
 	git submodule update --init --recursive
 
-update: submodules
+$(update_dirs):
+	$(MAKE) -C $(patsubst _update_%,%,$@) update
+
+update: submodules $(update_dirs)
 
 $(SUBDIRS):
 	$(MAKE) -C $@
