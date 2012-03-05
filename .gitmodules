@@ -10,3 +10,6 @@
 [submodule "dotgit"]
 	path = dotgit
 	url = git@github.com:qqshfox/dotgit.git
+[submodule "dotgdb"]
+	path = dotgdb
+	url = https://github.com/qqshfox/dotgdb.git
