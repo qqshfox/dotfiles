@@ -1,15 +1,15 @@
 [submodule "dotvim"]
 	path = dotvim
-	url = git@github.com:qqshfox/dotvim.git
+	url = https://github.com/qqshfox/dotvim.git
 [submodule "dotzsh"]
 	path = dotzsh
-	url = git@github.com:qqshfox/dotzsh.git
+	url = https://github.com/qqshfox/dotzsh.git
 [submodule "dottmux"]
 	path = dottmux
-	url = git@github.com:qqshfox/dottmux.git
+	url = https://github.com/qqshfox/dottmux.git
 [submodule "dotgit"]
 	path = dotgit
-	url = git@github.com:qqshfox/dotgit.git
+	url = https://github.com/qqshfox/dotgit.git
 [submodule "dotgdb"]
 	path = dotgdb
 	url = https://github.com/qqshfox/dotgdb.git
